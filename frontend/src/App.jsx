@@ -1,33 +1,66 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
-
+  
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
+      <div className="sidebar">
+    <div className="logo_details">
+      <i className="bx bxl-audible icon"></i>
+      <div className="logo_name">ROKO</div>
+      <i className="bx bx-menu" id="btn"></i>
+    </div>
+    <ul className="nav-list">
+      <li>
+        <a href="index.html">
+          <i className="bx bx-grid-alt"></i>
+          <span className="link_name">Home</span>
         </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
+        <span className="tooltip">Home</span>
+      </li>
+      <li>
+        <a href="About.html">
+          <i className="bx bx-user"></i>
+          <span className="link_name">About</span>
         </a>
+        <span className="tooltip">About</span>
+      </li>
+      <li>
+        <a href="#">
+          <i className="bx bx-news"></i>
+          <span className="link_name">News</span>
+        </a>
+        <span className="tooltip">News</span>
+      </li>
+      <li>
+        <a href="#">
+          <i className="bx bx-chat"></i>
+          <span className="link_name">IA ROKO</span>
+        </a>
+        <span className="tooltip">IA ROKO</span>
+      </li>
+      <li className="profile">
+        <div className="profile_details">
+          <img src="assest/img/admin.png" alt="profile image"/>
+          <div className="profile_content">
+            <div className="name">Guillermo </div>
+            <div className="designation">Admin</div>
+          </div>
+        </div>
+        <i className="bx bx-log-out" id="log_out"></i>
+      </li>
+    </ul>
+  </div>
+  <section className="home-sectionIA">
+    <div className="input-container">
+      <p id="output"></p>
+      <div className="input-form">
+        <input type="text" id="mensaje" name="mensaje" placeholder="Que te gustaria saber?"/>
+        <div id="submit">Enviar</div>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+    </div>
+  </section>
     </>
   )
 }
